@@ -1,0 +1,19 @@
+📄 RESUME SETUP INSTRUCTIONS
+================================
+
+To make the "Download Resume" button work:
+
+1. Add your resume PDF file to this folder (public/)
+2. Name it: resume.pdf
+3. The button will automatically download it as "Shravan_More_Resume.pdf"
+
+Alternative: If you want a different filename:
+- Name your file whatever you want (e.g., Shravan_Resume.pdf)
+- Update the href in src/components/HeroSection.tsx:
+  Change: href="/resume.pdf"
+  To: href="/your-filename.pdf"
+
+The file should be placed at:
+public/resume.pdf
+
+Once added, the download button will work automatically!
