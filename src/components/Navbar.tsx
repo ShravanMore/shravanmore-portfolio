@@ -50,7 +50,7 @@ export default function Navbar() {
             </a>
 
             {/* Desktop Nav */}
-            <div className="hidden md:flex items-center gap-1">
+            <div className="hidden lg:flex items-center gap-1">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
@@ -74,7 +74,7 @@ export default function Navbar() {
             </div>
 
             {/* Mobile menu button */}
-            <div className="md:hidden flex items-center gap-3">
+            <div className="lg:hidden flex items-center gap-3">
               <button
                 onClick={toggleTheme}
                 className="p-2 rounded-lg glass"
@@ -110,7 +110,7 @@ export default function Navbar() {
             animate={{ opacity: 1, x: "0%" }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ type: "tween", duration: 0.3 }}
-            className="fixed inset-0 z-[99] md:hidden flex items-center justify-center"
+            className="fixed inset-0 z-[99] lg:hidden flex items-center justify-center"
             style={{ background: "var(--background)" }}
           >
             <div className="flex flex-col items-center gap-6">

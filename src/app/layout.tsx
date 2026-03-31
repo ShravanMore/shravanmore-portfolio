@@ -198,7 +198,7 @@ export default function RootLayout({
         <link rel="icon" href="/icon-192.png" type="image/png" />
         <link rel="apple-touch-icon" href="/icon-192.png" />
       </head>
-      <body className="min-h-screen">{children}</body>
+      <body className="min-h-screen overflow-x-hidden max-w-full">{children}</body>
     </html>
   );
 }

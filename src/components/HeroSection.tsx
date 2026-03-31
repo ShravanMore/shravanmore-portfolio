@@ -39,7 +39,7 @@ export default function HeroSection() {
   ], []);
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Gradient orbs */}
       {orbs.map((orb, i) => (
         <motion.div
@@ -65,8 +65,8 @@ export default function HeroSection() {
         />
       ))}
 
-      <div className="relative z-10 px-4 max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-80px)]">
+      <div className="relative z-10 px-4 max-w-7xl mx-auto w-full">
+        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-120px)]">
           {/* Left side - Text content */}
           <div className="text-center lg:text-left">
             <motion.div

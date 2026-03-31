@@ -27,7 +27,7 @@ export default function Home() {
       <LoadingScreen />
       <ParticleBackground />
       <Navbar />
-      <main className="relative z-10">
+      <main className="relative z-10 overflow-x-hidden">
         <HeroSection />
         <AboutSection />
         <ExperienceSection />
