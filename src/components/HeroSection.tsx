@@ -2,13 +2,18 @@
 import { useState, useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
 
-export default function HeroSection() {
+interface HeroSectionProps {
+  loadingDone?: boolean;
+}
+
+export default function HeroSection({ loadingDone = false }: HeroSectionProps) {
   const fullText = "Hi, I'm Shravan More";
   const [displayText, setDisplayText] = useState("");
   const [showCursor, setShowCursor] = useState(true);
   const [isTypingComplete, setIsTypingComplete] = useState(false);
 
   useEffect(() => {
+    if (!loadingDone) return;
     let i = 0;
     const interval = setInterval(() => {
       if (i <= fullText.length) {
@@ -22,14 +27,13 @@ export default function HeroSection() {
       }
     }, 80);
     return () => clearInterval(interval);
-  }, []);
+  }, [loadingDone]);
 
   useEffect(() => {
-    if (!isTypingComplete) {
-      const cursorInterval = setInterval(() => setShowCursor((prev) => !prev), 530);
-      return () => clearInterval(cursorInterval);
-    }
-  }, [isTypingComplete]);
+    if (!loadingDone || isTypingComplete) return;
+    const cursorInterval = setInterval(() => setShowCursor((prev) => !prev), 530);
+    return () => clearInterval(cursorInterval);
+  }, [loadingDone, isTypingComplete]);
 
   // Floating orbs data - memoized to prevent re-renders
   const orbs = useMemo(() => [

@@ -2,13 +2,22 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 
-export default function LoadingScreen() {
+interface LoadingScreenProps {
+  onDone?: () => void;
+}
+
+export default function LoadingScreen({ onDone }: LoadingScreenProps) {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 2000);
-    return () => clearTimeout(timer);
-  }, []);
+    // Hide the overlay after 2s, then fire onDone after the 0.6s fade-out
+    const hideTimer = setTimeout(() => setIsLoading(false), 2000);
+    const doneTimer = setTimeout(() => onDone?.(), 2600);
+    return () => {
+      clearTimeout(hideTimer);
+      clearTimeout(doneTimer);
+    };
+  }, [onDone]);
 
   return (
     <AnimatePresence>

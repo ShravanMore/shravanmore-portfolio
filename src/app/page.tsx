@@ -1,6 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
@@ -22,13 +23,15 @@ const LoadingScreen = dynamic(() => import("@/components/LoadingScreen"), {
 });
 
 export default function Home() {
+  const [loadingDone, setLoadingDone] = useState(false);
+
   return (
     <>
-      <LoadingScreen />
+      <LoadingScreen onDone={() => setLoadingDone(true)} />
       <ParticleBackground />
       <Navbar />
       <main className="relative z-10 overflow-x-hidden">
-        <HeroSection />
+        <HeroSection loadingDone={loadingDone} />
         <AboutSection />
         <ExperienceSection />
         <EducationSection />
