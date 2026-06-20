@@ -19,6 +19,7 @@ const projects = [
       "Built a full-stack blog application using React, Node.js, and MySQL with JWT-based authentication and file upload support. Implemented dynamic routing, protected routes, and MySQL JOIN queries to display user-authored posts with category filtering.",
     techStack: ["React", "Node.js", "Express.js", "MySQL", "JWT"],
     github: "https://github.com/ShravanMore/blog_space",
+    live: "https://blogspace-frontend-u97x.onrender.com/",
     date: "May 2025",
     gradient: "from-purple-500/20 to-blue-500/20",
   },
