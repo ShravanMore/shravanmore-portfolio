@@ -10,7 +10,7 @@ const highlightedBio = [
   { text: " student from ", highlight: false },
   { text: "Mumbai, India", highlight: true },
   { text: ". Currently pursuing my B.E. in Artificial Intelligence with a ", highlight: false },
-  { text: "CGPA of 9.27", highlight: true },
+  { text: "CGPA of 9.36", highlight: true },
   { text: ". I love building modern web applications, solving complex problems, and exploring the intersection of ", highlight: false },
   { text: "AI and software development", highlight: true },
   { text: ".", highlight: false },
