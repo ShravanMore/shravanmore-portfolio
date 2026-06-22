@@ -8,7 +8,7 @@ const education = [
     institution: "Thadomal Shahani Engineering College",
     location: "Bandra, Mumbai",
     period: "2022 - 2026",
-    cgpa: "9.27",
+    cgpa: "9.36",
     gradient: "from-purple-500/20 to-blue-500/20",
   },
   {
